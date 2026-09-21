@@ -1,16 +1,16 @@
 -- GitHub-ready Gumball menu for Roblox Rivals
 -- This file is meant to be uploaded to GitHub and loaded through a raw URL.
 
-local REQUIRED_GAME = 'Roblox Rivals'
+local REQUIRED_GAME = 'rivals'
 
 if not game or not game:GetService then
     return
 end
 
-local gameName = tostring(game.Name or '')
-local placeName = tostring(game.PlaceName or '')
+local gameName = tostring(game.Name or ''):lower()
+local placeName = tostring(game.PlaceName or ''):lower()
 
-if gameName ~= REQUIRED_GAME and placeName ~= REQUIRED_GAME then
+if not (gameName:find(REQUIRED_GAME, 1, true) or placeName:find(REQUIRED_GAME, 1, true)) then
     return
 end
 

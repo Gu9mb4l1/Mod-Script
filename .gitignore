@@ -1,3 +1,0 @@
-shared.StaffDetectorLoading = false
-autoload = true
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Ukrubojvo/Modules/main/StaffDetector.lua"))()
